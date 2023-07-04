@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Header from './components/Header';
+import Navbar from './components/Navbar';
+import { Stack } from '@chakra-ui/react';
+import Doctor from './components/Doctor';
+import Footer from './components/Footer'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+    <Stack direction='column'  spacing={24}>
+    <Navbar></Navbar>
+      <Header></Header>
+      <Doctor></Doctor>
+      <Footer></Footer>
+
+    </Stack>
+      
+      </>
+   
+
+  )
 }
 
-export default App;
+export default App
